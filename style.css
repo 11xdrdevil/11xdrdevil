@@ -1,8 +1,9 @@
 :root {
-  --themeColor: #ff0551;
+  --themeColor: #06c98e;
+  --theColor: #f3ef18;
   --defWidth: 20rem;
-  --defHeight: 20rem;
-  --frontPageDividerHeight: 13rem; /*--frontPageDividerHeight =  (--defHeight/2)+3rem */
+  --defHeight: 25rem;
+  --frontPageDividerHeight: 17rem; /*--frontPageDividerHeight =  (--defHeight/2)+3rem */
 
 }
 *,
@@ -229,6 +230,13 @@ body {
   height: var(--frontPageDividerHeight);
   justify-content: center;
   padding: .75rem;
+}
+
+.Background_Image {
+  background-image: url("https://assets.traveltriangle.com/blog/wp-content/uploads/2017/05/pondicherry-cover-kb-920506.jpg");
+  background-position: center;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
 }
 
 .card-front__tp--city {

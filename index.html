@@ -2,12 +2,15 @@
 <head>
   <title>Folding Card Using CSS</title>
   <link rel="stylesheet" href="style.css">
+  <script src="variable.js"></script>
 </head>
 <body>
-    <main class="main">
-        
+    <button type="button" onclick="myFunction_set('blue')">Blue</button>
+    <button type="button" onclick="myFunction_set('red')">Red</button>
+    <button type="button" onclick="myFunction_set('green')">Green</button>
+    <button type="button" onclick="myFunction_set('#f3ef18')">Yellow</button>
+    <main class="main">   
         <section class="card-area">
-
             <section class="card-section">
                 <div class="card">
                     <div class="flip-card">
@@ -37,10 +40,10 @@
                                    </svg>
 
                                    <h2 class="card-front__heading">
-                                    Colsan
+                                    Puducherry
                                 </h2>
                                 <p class="card-front__text-price">
-                                    From $34
+                                    From <b>₹2000</b>/day
                                 </p>
                                 </div>
 
@@ -51,9 +54,10 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <video class="video__container" autoplay muted loop>
+                                <img class="video__container" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2017/05/pondicherry-cover-kb-920506.jpg" alt="Puducherry"></Image>
+                                <!-- <video class="video__container" autoplay muted loop>
                                     <source class="video__media" src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
-                                </video>
+                                </video> -->
                             </div>
                         </div>
                     </div>
@@ -61,10 +65,10 @@
                     <div class="inside-page">
                         <div class="inside-page__container">
                             <h3 class="inside-page__heading inside-page__heading--city">
-                                For urban lovers
+                                For Nature lovers
                             </h3>
                             <p class="inside-page__text">
-                               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                A love child of the French and Indian cultures, Pondicherry is a beach-side union territory located in Tamil Nadu. Previously until 1954, Pondicherry was French settlement.
                             </p>
                             <a href="#" class="inside-page__btn inside-page__btn--city">View deals</a>
                         </div>
