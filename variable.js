@@ -1,4 +1,6 @@
-let a = prompt("Enter Number 1")
-let b = prompt("Enter Number 2")
+let a = prompt("Enter your age...")
 
-alert(Number(a)- Number(b))
+if(parseInt(a) >= 18)
+alert("You are old enough to drive.")
+else
+alert(`You are left with ${18 - parseInt(a)} years to drive.`)
