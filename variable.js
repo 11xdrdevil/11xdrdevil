@@ -1,6 +1,7 @@
 let a = prompt("Enter your age...")
+let myAge = 21;
 
-if(parseInt(a) >= 18)
-alert("You are old enough to drive.")
+if(parseInt(a) > myAge)
+alert(`You are ${parseInt(a) - myAge} years older than me.`)
 else
-alert(`You are left with ${18 - parseInt(a)} years to drive.`)
+alert(`I am ${myAge - parseInt(a)} years older than you.`)
