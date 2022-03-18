@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reinvented-color-wheel@0.1.6"></script>
 
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reinvented-color-wheel@0.1.6/css/reinvented-color-wheel.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="variable.js"></script>
 
@@ -13,12 +16,15 @@
 
 <body>
     <div class="text-center">
-        <input type="color" id="colourPicker" onclick="myFunction_SetColourAsElementColour()">
+        <!-- <input type="color" id="colourPicker" onclick="myFunction_SetColourAsElementColour()" value="#06c98e"> -->
     </div>
     <main class="main">
-        <section class="card-area">
-            <section class="card-section">
-                <div class="card">
+        <section class="container card-area">
+            <section class="row card-section">
+                <div class="col-md-4">
+                    <div id="colourPicker"></div>
+                </div>
+                <div class="card col-md-4">
                     <div class="flip-card">
                         <div class="flip-card__container">
                             <div class="card-front">
@@ -94,6 +100,20 @@
             </section>
         </section>
     </main>
+    <script>
+        new ReinventedColorWheel({
+            onChange: function (color) {
+                myFunction_SetColourAsElementColour(hslToHex(color.hsl[0], color.hsl[1], color.hsl[2]))
+            },
+            appendTo: document.getElementById('colourPicker'),
+            hsl: [162, 94, 41],
+            // hsv: [0, 100, 100],
+            // wheelDiameter: 200,
+            // wheelThickness: 20,
+            // handleDiameter: 16,
+            // wheelReflectsSaturation: true,
+        })
+    </script>
 </body>
 
 </html>
